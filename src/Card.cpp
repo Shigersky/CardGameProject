@@ -47,15 +47,42 @@ void Card::setName(std::string name)
        healthText.setFillColor(sf::Color::Blue);
        attackText.setFont(font);
        healthText.setFont(font);
-       attackText.setPosition(cardOutline.getPosition().x, cardOutline.getPosition().y + 50);
-       healthText.setPosition(cardOutline.getPosition().x + 80, cardOutline.getPosition().y + 50);
+       
 
        
    };
 
 
 
-   void Card::Update(){};
+   void Card::Update(sf::RenderWindow &window)
+   {
+       attackText.setPosition(cardOutline.getPosition().x, cardOutline.getPosition().y + 50);
+       healthText.setPosition(cardOutline.getPosition().x + 80, cardOutline.getPosition().y + 50);
+
+        float mouse_position_x = sf::Mouse::getPosition(window).x;
+        float mouse_position_y = sf::Mouse::getPosition(window).y;
+
+        float card_A1 = cardOutline.getPosition().x;
+        float card_A2 = cardOutline.getPosition().x + size.x;
+        float card_B1 = cardOutline.getPosition().y;
+        float card_B2 = cardOutline.getPosition().y + size.y;
+
+        bool mouse_card_collision = false;
+        if(mouse_position_x >= card_A1 && mouse_position_x <= card_A2 && mouse_position_y >= card_B1 && mouse_position_y <= card_B2)
+        {
+
+        mouse_card_collision = true;
+        }
+
+
+       if (mouse_card_collision == true && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+       {
+           cardOutline.setPosition(mouse_position_x-50, mouse_position_y-50);
+           cardOutline.setFillColor(sf::Color::Yellow);
+       }
+       
+   };
+
    void Card::Draw(sf::RenderWindow &window)
    {
        window.draw(cardOutline);

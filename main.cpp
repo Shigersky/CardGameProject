@@ -25,12 +25,12 @@ testCard.Initialize();
         sf::Event event;
         while (window.pollEvent(event))
         {
-            testCard.Update();
+            testCard.Update(window);
 
             if (event.type == sf::Event::Closed)
                 window.close();
-        }
 
+        }
         window.clear();
         testCard.Draw(window);
         window.display();
