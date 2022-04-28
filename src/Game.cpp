@@ -12,6 +12,8 @@ game_window.setFramerateLimit(fps_limit);
 
 }
 
+
+//Main game loop
 void Game::Run()
 {
 
@@ -34,12 +36,9 @@ testCard.Initialize();
         while (game_window.pollEvent(event))
         {
             testCard.Update(game_window);
-
             if (event.type == sf::Event::Closed)
-            {
-                game_window.close();
-                std::cout<< "Window has been closed \n";
-            }
+            Game::End();
+            
 
         }
 
@@ -50,12 +49,18 @@ testCard.Initialize();
 
 }
 
+
+//WIP 
 void Game::Pause()
 {
 
 }
 
+
+//Closes the window
 void Game::End()
 {
+                game_window.close();
+                std::cout<< "Window has been closed \n";
 
 }

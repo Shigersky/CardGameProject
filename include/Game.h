@@ -8,7 +8,7 @@ class Game
 private:
 sf::RenderWindow game_window;
 int fps_limit = 60;
-std::vector<Card> deck;
+
 
 
 
