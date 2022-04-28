@@ -46,7 +46,7 @@ void Card::setName(std::string name)
        attackText.setString(std::to_string(attack));
        healthText.setString(std::to_string(health));
        attackText.setFillColor(sf::Color::Red);
-       healthText.setFillColor(sf::Color::Blue);
+       healthText.setFillColor(sf::Color::Green);
        attackText.setFont(font);
        healthText.setFont(font);
        

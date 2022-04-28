@@ -1,11 +1,12 @@
 #include "Game.h"
 #include "Card.h"
+#include "Player.h"
 #include <iostream>
 
 Card testCard(10, 10, "Gigachad");
 
 
-Game::Game() : game_window(sf::VideoMode(800,600), "CardGame", sf::Style::Default)
+Game::Game() : game_window(sf::VideoMode(800,600), "CardGame", sf::Style::Default) , player(10, 10, "Player")
 {
 
 game_window.setFramerateLimit(fps_limit);
@@ -44,6 +45,7 @@ testCard.Initialize();
 
         game_window.clear();
         testCard.Draw(game_window);
+        player.DrawPlayerIcon(game_window);
         game_window.display();
     }
 
