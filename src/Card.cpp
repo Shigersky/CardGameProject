@@ -33,6 +33,8 @@ void Card::setName(std::string name)
 //Classic Init->Update->Draw->Destroy
    void Card::Initialize()
    {
+
+       std::cout<<"Card Initialized\n";
        
        cardOutline.setPosition(sf::Vector2f(200, 100));
        cardOutline.setSize(size);
