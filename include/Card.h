@@ -20,7 +20,7 @@ class Card
     Card(int hp, int attack, std::string name);
 
     void Initialize();
-    void Update();
+    void Update(sf::RenderWindow &window);
     void Draw(sf::RenderWindow &window);
     void Destroy();
 

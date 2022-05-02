@@ -8,6 +8,8 @@ Release static/
 *.lastbuildstate
 *.idb
 *.log
+*.jpeg
+*.png
 
 # Some dll's
 sfml-audio-d-2.dll
