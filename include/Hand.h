@@ -13,7 +13,9 @@ int number_of_cards;
 
 public:
 
+Hand();
 
+void AddCardToHand(Card added_card);
 
 
 };

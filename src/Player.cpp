@@ -18,3 +18,8 @@ void Player::DrawPlayerIcon(sf::RenderWindow &window)
 window.draw(player_icon_sprite);
 
 };
+
+void Draw(Deck &player_deck, Hand &player_hand)
+{
+    player_hand.AddCardToHand(player_deck.GetFirstCard());
+};

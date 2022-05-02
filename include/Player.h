@@ -21,4 +21,7 @@ Player(int hp, int mana, std::string name);
 
 void DrawPlayerIcon(sf::RenderWindow &window);
 
+void Draw(Deck &player_deck, Hand &player_hand);
+
+
 };
