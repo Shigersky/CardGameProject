@@ -16,4 +16,7 @@ Deck();
 void Shuffle();
 Card GetFirstCard();
 int GetDeckSize();
+Card CreateRandomCard(int random_card_index);
+
+
 };
