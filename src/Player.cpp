@@ -12,6 +12,21 @@ Player::Player(int hp, int mana, std::string name)
 
 };
 
+void Player::Update()
+{
+
+};
+
+void Player::DrawPlayerHand(sf::RenderWindow &window)
+{
+  for (size_t i = 0; i < player_hand.GetHandSize(); i++)
+  {
+      Card current_card = player_hand.GetCard(i);
+      current_card.Draw(window);
+  }
+  
+};
+
 void Player::DrawPlayerIcon(sf::RenderWindow &window)
 {
 

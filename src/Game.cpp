@@ -23,12 +23,6 @@ std::cout<<"Game ran\n";
 
 
 
-testCard.Initialize();
-
-
-
-
-
 
     while (game_window.isOpen())
     {
@@ -36,7 +30,7 @@ testCard.Initialize();
         sf::Event event;
         while (game_window.pollEvent(event))
         {
-            testCard.Update(game_window);
+
             if (event.type == sf::Event::Closed)
             Game::End();
             
@@ -44,8 +38,8 @@ testCard.Initialize();
         }
 
         game_window.clear();
-        testCard.Draw(game_window);
         user_player.DrawPlayerIcon(game_window);
+        user_player.DrawPlayerHand(game_window);
         game_window.display();
     }
 

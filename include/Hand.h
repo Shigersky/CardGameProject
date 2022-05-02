@@ -16,6 +16,8 @@ public:
 Hand();
 
 void AddCardToHand(Card added_card);
+int GetHandSize();
+Card GetCard(int card_index);
 
 
 };
