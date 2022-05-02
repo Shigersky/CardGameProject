@@ -6,7 +6,7 @@
 Card testCard(10, 10, "Gigachad");
 
 
-Game::Game() : game_window(sf::VideoMode(800,600), "CardGame", sf::Style::Default) , player(10, 10, "Player")
+Game::Game() : game_window(sf::VideoMode(800,600), "CardGame", sf::Style::Default) , user_player(10, 10, "Player") , opponent_player(10, 10, "Opponent")
 {
 
 game_window.setFramerateLimit(fps_limit);
@@ -45,7 +45,7 @@ testCard.Initialize();
 
         game_window.clear();
         testCard.Draw(game_window);
-        player.DrawPlayerIcon(game_window);
+        user_player.DrawPlayerIcon(game_window);
         game_window.display();
     }
 

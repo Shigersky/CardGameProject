@@ -11,6 +11,8 @@ Release static/
 *.log
 *.jpeg
 *.png
+*.txt
+*.json
 
 # Some dll's
 sfml-audio-d-2.dll

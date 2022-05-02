@@ -1,5 +1,6 @@
 #pragma once
 #include "Deck.h"
+#include "Hand.h"
 #include <SFML/Graphics.hpp>
 
 class Player
@@ -7,6 +8,7 @@ class Player
 
 private:
 Deck player_deck;
+Hand player_hand;
 int player_health;
 int player_mana;
 std::string player_name;
