@@ -1,7 +1,6 @@
 #custom
 *.dll
 *.exe
-*.vcxproj
 *.filters
 Debug static/
 Release static/
