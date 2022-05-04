@@ -9,7 +9,7 @@ private:
 sf::RenderWindow game_window;
 int fps_limit = 60;
 Player user_player;
-Player opponent_player;
+//Player opponent_player;
 
 
 public:

@@ -2,7 +2,9 @@
 
 Hand::Hand()
 {
+hand_it = hand_of_cards.begin();
 
+std::cout<<"Hand size:" <<hand_of_cards.size() <<"\n";
 };
 
 void Hand::AddCardToHand(Card added_card)

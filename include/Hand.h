@@ -9,6 +9,7 @@ class Hand
 private:
 std::vector<Card> hand_of_cards;
 int number_of_cards;
+std::vector<Card>::iterator hand_it;
 
 
 public:

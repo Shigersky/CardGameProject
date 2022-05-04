@@ -1,8 +1,13 @@
 #include "Deck.h"
-
+#include <iostream>
 
 Deck::Deck() 
 {
+for (size_t i = 0; i < 10; i++)
+{
+    Deck::CreateRandomCard(i);
+    std::cout<<"Card created\n";
+}
 
 
 };

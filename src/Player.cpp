@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player(int hp, int mana, std::string name)
+Player::Player(int hp, int mana, std::string name) : player_hand(), player_deck()
 {
 
     player_health = hp;
@@ -11,6 +11,7 @@ Player::Player(int hp, int mana, std::string name)
     player_icon_sprite.setScale(0.2, 0.2);
 
 };
+
 
 void Player::Update()
 {
@@ -24,17 +25,16 @@ void Player::DrawPlayerHand(sf::RenderWindow &window)
       Card current_card = player_hand.GetCard(i);
       current_card.Draw(window);
   }
+  window.draw(player_icon_sprite);
   
 };
 
-void Player::DrawPlayerIcon(sf::RenderWindow &window)
+void Player::Draw(Deck &player_deck, Hand &player_hand, int x)
 {
 
-window.draw(player_icon_sprite);
-
-};
-
-void Draw(Deck &player_deck, Hand &player_hand)
-{
-    player_hand.AddCardToHand(player_deck.GetFirstCard());
+    for (size_t i = 0; i < x; i++)
+    {
+        player_hand.AddCardToHand(player_deck.GetFirstCard());
+    }
+    
 };

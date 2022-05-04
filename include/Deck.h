@@ -13,6 +13,8 @@ int number_of_cards;
 
 public:
 Deck();
+
+
 void Shuffle();
 Card GetFirstCard();
 int GetDeckSize();

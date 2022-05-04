@@ -25,7 +25,7 @@ void DrawPlayerHand(sf::RenderWindow &window);
 
 void DrawPlayerIcon(sf::RenderWindow &window);
 
-void Draw(Deck &player_deck, Hand &player_hand);
+void Draw(Deck &player_deck, Hand &player_hand, int x);
 
 
 };
