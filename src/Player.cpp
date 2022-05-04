@@ -1,4 +1,5 @@
 #include "Player.h"
+#include <iostream>
 
 Player::Player(int hp, int mana, std::string name) : player_hand(), player_deck()
 {
@@ -22,19 +23,20 @@ void Player::DrawPlayerHand(sf::RenderWindow &window)
 {
   for (size_t i = 0; i < player_hand.GetHandSize(); i++)
   {
-      Card current_card = player_hand.GetCard(i);
+      Card current_card = player_hand.GetCard();
       current_card.Draw(window);
   }
-  window.draw(player_icon_sprite);
+  //window.draw(player_icon_sprite);
   
 };
 
-void Player::Draw(Deck &player_deck, Hand &player_hand, int x)
+void Player::Draw(Deck player_deck, Hand player_hand, int x)
 {
 
     for (size_t i = 0; i < x; i++)
     {
         player_hand.AddCardToHand(player_deck.GetFirstCard());
+        std::cout<<"Cards has been drawn\n";
     }
     
 };

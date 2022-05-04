@@ -1,6 +1,5 @@
-#include <iostream>
+
 #include <SFML/Graphics.hpp>
-#include "Card.h"
 #include "Game.h"
 
 
