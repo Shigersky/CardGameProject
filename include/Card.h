@@ -22,7 +22,7 @@ class Card
     void Initialize();
     void Update(sf::RenderWindow &window);
     void Draw(sf::RenderWindow &window);
-    void Destroy();
+    void Destroy(Card * card);
 
     void setHealth(int hp);
     void setAttack(int attack);
