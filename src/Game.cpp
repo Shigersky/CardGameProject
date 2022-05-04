@@ -25,7 +25,7 @@ void Game::Run()
 std::cout<<"Game ran\n";
 
 //user_player.Draw(user_player.player_deck, user_player.player_hand, 1);
-//user_player.player_hand.AddCardToHand(test_card_pointer);
+user_player.player_hand.AddCardToHand(test_card_pointer);
 
 
 
@@ -37,7 +37,7 @@ std::cout<<"Game ran\n";
         while (game_window.pollEvent(event))
         {
 
-            testCard.Update(game_window);
+            user_player.player_hand.Update(game_window);
             if (event.type == sf::Event::Closed)
             Game::End();
             
@@ -45,8 +45,7 @@ std::cout<<"Game ran\n";
         }
 
         game_window.clear();
-        user_player.DrawPlayerHand(game_window);
-        testCard.Draw(game_window);
+        //testCard.Draw(game_window);
         game_window.display();
     }
 

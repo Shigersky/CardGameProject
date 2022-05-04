@@ -21,7 +21,7 @@ Player(int hp, int mana, std::string name);
 
 void Update();
 
-void DrawPlayerHand(sf::RenderWindow &window);
+//void DrawPlayerHand(sf::RenderWindow &window);
 
 void DrawPlayerIcon(sf::RenderWindow &window);
 

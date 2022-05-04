@@ -27,6 +27,9 @@ healthText.setFont(font);
 cardOutline.setPosition(sf::Vector2f(200, 100));
 cardOutline.setSize(size);
 
+attackText.setPosition(cardOutline.getPosition().x, cardOutline.getPosition().y + 50);
+healthText.setPosition(cardOutline.getPosition().x + 80, cardOutline.getPosition().y + 50);
+
 };
 
    
@@ -59,6 +62,8 @@ void Card::Initialize()
 void Card::Update(sf::RenderWindow &window)
 
 {
+
+
     attackText.setPosition(cardOutline.getPosition().x, cardOutline.getPosition().y + 50);
     healthText.setPosition(cardOutline.getPosition().x + 80, cardOutline.getPosition().y + 50);
 

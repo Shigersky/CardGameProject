@@ -1,5 +1,5 @@
 #pragma once 
-#include <stack>
+#include <iostream>
 #include "Card.h"
 
 
@@ -12,14 +12,15 @@ int number_of_cards;
 
 
 public:
-std::stack<Card> hand_of_cards;
+std::vector<Card> hand_of_cards;
 
 Hand();
 
-void Update();
+void Update(sf::RenderWindow &window);
+void Draw(sf::RenderWindow &window);
 void AddCardToHand(Card * added_card);
 int GetHandSize();
-Card GetCard();
+Card GetCard(int x);
 
 
 };
